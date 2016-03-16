@@ -42,4 +42,22 @@ sudo docker ps
 ```
 ######3
 
-    
+create task def.  
+Add container:  
+Fill in:  
+yd-service  
+rengokantai/yd-service:simple  
+copy json file to local machine and name xxx.json  
+Then, check some commands:
+```
+aws ecs register-task-definition help
+aws ecs register-task-definition --cli-input-json file://xxx.json   //failed on windows7
+```
+######4
+```
+aws ecs list-clusters
+aws ecs list-task-definitions
+aws ecs create-service --cluster csname --task-defination sample-service:1 --desired-count 1 --service-name simple-service --region us-east-1
+aws ecs describe-services --cluster csname --service simple-service --region us-east-1
+```
+
