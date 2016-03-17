@@ -61,3 +61,6 @@ aws ecs create-service --cluster csname --task-defination sample-service:1 --des
 aws ecs describe-services --cluster csname --service simple-service --region us-east-1
 ```
 
+#####3
+######1 add a database
+######2 link to redis Do not to forget to press "create"!
